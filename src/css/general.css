@@ -45,6 +45,9 @@ h6 {
   font-size: 12;
   text-transform: uppercase; }
 
+.card-list {
+  display: flex; }
+
 .container-nomargin {
   margin: .5rem; }
 

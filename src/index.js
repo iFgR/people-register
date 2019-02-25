@@ -1,7 +1,19 @@
+import AddPeopleCard from './js/add-people-card.js';
 import HandleListCommands from './js/handle-list-commands.js';
 
-import add from './people-list/people-list.js';
+const peopleList = [
+  {
+    personId: 1,
+    personName: 'Alberto Roberto'
+  },
+  {
+    personId: 2,
+    personName: 'Rolando Lero'
+  }
+];
 
-add();
+for (let personInfo of peopleList) {
+  AddPeopleCard(personInfo);
+}
 
 HandleListCommands();
