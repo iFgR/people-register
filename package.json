@@ -1,0 +1,23 @@
+{
+  "name": "spa-local-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "3.9.1",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "http": "0.0.0",
+    "jest": "^24.1.0",
+    "node-sass": "^4.11.0",
+    "run-sequence": "^2.2.1",
+    "st": "^1.2.2"
+  }
+}
