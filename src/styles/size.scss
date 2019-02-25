@@ -1,0 +1,12 @@
+$sizes: (
+  xs: (0, 48, #F00),
+  sm: (48, 64, #0F0),
+  md: (64, 75, #00F),
+  lg: (75, 99, #F0F),
+  xg: (99, 200, #FFF)
+);
+
+$gutter-width: 1rem;
+$gutter-compensation: calc((var($gutter-width) * 0.5) * -1);
+$half-gutter-width: calc((var($gutter-width) * 0.5));
+$grid-columns: 12;

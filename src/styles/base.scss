@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+
+h1 {
+  color: $dark-shade-100;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  font-size: 42;
+}
+
+h2 {
+  color: $dark-shade-100;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  font-size: 32;
+}
+
+h3 {
+  color: $dark-shade-100;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 24;
+}
+
+h4 {
+  color: $dark-shade-100;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 19;
+}
+
+h5 {
+  color: $dark-shade-75;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal;
+  font-size: 14;
+}
+
+h6 {
+  color: $dark-shade-75;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 12;
+  text-transform: uppercase;
+}
