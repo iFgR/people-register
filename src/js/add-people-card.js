@@ -6,19 +6,19 @@ export default personInfo => {
   listContainer.appendChild(listItem);
 };
 
-const tplPeopleCard = ({ personId, personName }) => `
+const tplPeopleCard = ({ personId, personName, phone, isActive, cpf, birthday }) => `
   <div class="status">
-    <button>Ativado</button>
+    ${isActive}
   </div>
   <div class="identification">
     <h4>${personName}</h4>
-    <h6>056.235.478-22</h6>
+    <h6>${cpf}</h6>
   </div>
   <div class="info">
-    <h6>10/08/1999</h6>
-    <h6>(22) 98866-2211</h6>
+    <h6>${birthday}</h6>
+    <h6>${phone}</h6>
   </div>
   <div class="commands">
-    <button onclick="editPerson(${personId})">Editar</button>
+    <button onclick="editPeron(${personId})">Editar</button>
   </div>
 `;

@@ -18,25 +18,49 @@
 
       <section class="people-list">
         <ul class="list">
-          <!-- <li class="card-list"> -->
-            <!-- <div class="status">
-              <button>Ativado</button>
+          <!-- <li class="card-list">
+            <div class="status">
+              ${isActive}
             </div>
             <div class="identification">
-              <h4>Alberto Roberto</h4>
-              <h6>056.235.478-22</h6>
+              <h4>${personName}</h4>
+              <h6>${cpf}</h6>
             </div>
             <div class="info">
               <h6>10/08/1999</h6>
-              <h6>(22) 98866-2211</h6>
+              <h6>${phone}</h6>
             </div>
             <div class="commands">
               <button onclick="editPeron()">Editar</button>
-            </div> -->
-          <!-- </li> -->
+            </div>
+          </li> -->
         </ul>
       </section>
     </main>
+
+    <div class="save-modal">
+      <form action="#" onsubmit="savePerson(event)">
+        <fieldset>
+          <input type="text" value="" name="formPersonId" id="form-person-id">
+
+          <label for="person-name">Nome</label>
+          <input type="text" value="" name="formPersonName" id="form-person-name">
+
+          <label for="form-cpf">CPF</label>
+          <input type="text" value="" name="formCpf" id="form-cpf">
+
+          <label for="form-phone">Telefone</label>
+          <input type="text" value="" name="formPhone" id="form-phone">
+
+          <label for="form-active">Ativo</label>
+          <input type="checkbox" value="active" name="formIsActive" id="form-is-active">
+        </fieldset>
+
+        <fieldset>
+          <button>Salvar</button>
+        </fieldset>
+      </form>
+    </div>
 
     <script src="index.js" type="module"></script>
   </body>
