@@ -1,10 +1,9 @@
 const listMethods = {
-  editPerson: () => {
-    console.log('edit');
+  editPerson: personId => {
+    console.log('edit', personId);
   }
-}
+};
 
 export default () => {
-  // window.editPerson = editPerson;
   Object.assign(window, listMethods);
-}
+};

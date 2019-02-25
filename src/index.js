@@ -1,19 +1,14 @@
-import AddPeopleCard from './js/add-people-card.js';
+import CreateNewPerson from './js/create-new-person.js';
 import HandleListCommands from './js/handle-list-commands.js';
-
-const peopleList = [
-  {
-    personId: 1,
-    personName: 'Alberto Roberto'
-  },
-  {
-    personId: 2,
-    personName: 'Rolando Lero'
-  }
-];
-
-for (let personInfo of peopleList) {
-  AddPeopleCard(personInfo);
-}
+import ListAllPeople from './js/list-all-people.js';
+import RenderPeopleList from './js/render-people-list.js';
 
 HandleListCommands();
+
+CreateNewPerson({
+  name: 'Albererto Roberto'
+});
+
+
+const peopleList = ListAllPeople();
+RenderPeopleList(peopleList);
