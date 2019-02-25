@@ -1,8 +1,7 @@
+import HandleListCommands from './js/handle-list-commands.js';
+
 import add from './people-list/people-list.js';
 
-console.log('ok');
 add();
 
-window.myName = () => {
-  console.log('inside');
-}
+HandleListCommands();
