@@ -1,44 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 h1 {
   color: $dark-shade-100;
   font-family: 'Quicksand', sans-serif;
   font-weight: normal;
-  font-size: 42;
+  font-size: 3.5rem;
 }
 
 h2 {
   color: $dark-shade-100;
   font-family: 'Quicksand', sans-serif;
   font-weight: normal;
-  font-size: 32;
+  font-size: 2.66rem;
 }
 
 h3 {
   color: $dark-shade-100;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  font-size: 24;
+  font-size: 2rem;
 }
 
 h4 {
   color: $dark-shade-100;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  font-size: 19;
+  font-size: 1.58rem;
 }
 
 h5 {
   color: $dark-shade-75;
   font-family: 'Quicksand', sans-serif;
   font-weight: normal;
-  font-size: 14;
+  font-size: 1.16rem;
 }
 
 h6 {
   color: $dark-shade-75;
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
-  font-size: 12;
+  font-size: 1rem;
   text-transform: uppercase;
 }

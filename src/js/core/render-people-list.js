@@ -6,7 +6,7 @@ export default peopleList => {
 
   const paginatedList = peopleList.slice(initialItem, endItem);
 
-  document.getElementsByName('actualPage')[0].value = window.actualPage;
+  document.getElementsByName('actualPage')[0].value = window.actualPage + 1;
   
   for (let personInfo of paginatedList) {
     AddPeopleCard(personInfo);

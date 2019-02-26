@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Local Store - List</title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/general.css" />
   </head>
 
@@ -14,10 +16,19 @@
     </header>
 
     <main>
-      <section class="list-pagination">
-        <button type="button" onclick="previousPage()">volta</button>
-        <input type="text" value="1" name="actualPage">
-        <button type="button" onclick="nextPage()">avança</button>
+      <section class="row">
+        <section class="addnew col-6">
+          <button class="btn -primary" type="button" onclick="addNewPerson()">Nova Pessoa</button>
+        </section>
+  
+        <section class="list-pagination col-6">
+          <button class="btn -success" type="button" onclick="previousPage()">volta</button>
+          <div class="textbox-container">
+            <input class="textbox" type="text" value="1" name="actualPage">
+            <i class="fas fa-bookmark fa-2x icon"></i>
+          </div>
+          <button class="btn -success" type="button" onclick="nextPage()">avança</button>
+        </section>
       </section>
 
       <section class="people-list">
@@ -42,31 +53,77 @@
       </section>
     </main>
 
-    <button onclick="limpa()">limpa</button>
+    <div class="save-modal hidden">
+      <form class="form" action="#" onsubmit="savePerson(event)">
+        <input type="hidden" value="" name="formPersonId" id="form-person-id">
 
-    <div class="save-modal">
-      <form action="#" onsubmit="savePerson(event)">
+        <div class="textbox-container">
+          <label class="label" for="person-name">Nome</label>
+          <input class="textbox" type="text" value="" name="formPersonName" id="form-person-name">
+          <i class="fas fa-user-alt fa-2x icon"></i>
+        </div>
+
+        <div class="textbox-container">
+          <label class="label" for="form-cpf">CPF</label>
+          <input class="textbox" type="text" value="" name="formCpf" id="form-cpf">
+          <i class="fas fa-id-card fa-2x icon"></i>
+        </div>
+        
+        <div class="textbox-container">
+          <label class="label" for="form-phone">Telefone</label>
+          <input class="textbox" type="text" value="" name="formPhone" id="form-phone">
+          <i class="fas fa-phone fa-2x icon"></i>
+        </div>
+
+        <div class="textbox-container">
+          <label class="label" for="form-email">E-Mail</label>
+          <input class="textbox" type="text" value="" name="formEmail" id="form-email">
+          <i class="fas fa-envelope fa-2x icon"></i>
+        </div>
+
+        <div class="textbox-container">
+          <label class="label" for="form-birthday">Data de Nascimento</label>
+          <input class="textbox" type="text" value="" name="formBirthday" id="form-birthday">
+          <i class="far fa-calendar-alt fa-2x icon"></i>
+        </div>
+
+        <div class="radio-container">
+          <label class="label">Genero</label>
+
+          <div class="fieldset">
+            <fieldset class="radiofield">
+              <input class="radio" type="radio" value="male" name="formGender" id="form-gender-male">
+              <label class="label" for="form-gender-male">Masculino</label>
+              <i class="fas fa-circle fa-1x icon"></i>
+            </fieldset>
+            <fieldset class="radiofield">
+              <input class="radio" type="radio" value="female" name="formGender" id="form-gender-female">
+              <label class="label" for="form-gender-female">Feminino</label>
+              <i class="fas fa-circle fa-1x icon"></i>
+            </fieldset>
+          </div>            
+        </div>
+
+        <div class="radio-container">
+          <label class="label">Status</label>
+        
+          <div class="fieldset">
+            <fieldset class="radiofield">
+              <input class="radio" type="radio" value="1" name="formIsActive" id="form-is-active">
+              <label class="label" for="form-is-active">Ativo</label>
+              <i class="fas fa-circle fa-1x icon"></i>
+            </fieldset>
+            <fieldset class="radiofield">
+              <input class="radio" type="radio" value="0" name="formIsActive" id="form-is-inactive">
+              <label class="label" for="form-is-inactive">Inativo</label>
+              <i class="fas fa-circle fa-1x icon"></i>
+            </fieldset>
+          </div>
+        </div>
+
         <fieldset>
-          <input type="text" value="" name="formPersonId" id="form-person-id">
-
-          <label for="person-name">Nome</label>
-          <input type="text" value="" name="formPersonName" id="form-person-name">
-
-          <label for="form-cpf">CPF</label>
-          <input type="text" value="" name="formCpf" id="form-cpf">
-
-          <label for="form-phone">Telefone</label>
-          <input type="text" value="" name="formPhone" id="form-phone">
-
-          <label for="form-birthday">Aniversário</label>
-          <input type="text" value="" name="formBirthday" id="form-birthday">
-
-          <label for="form-active">Ativo</label>
-          <input type="checkbox" value="active" name="formIsActive" id="form-is-active">
-        </fieldset>
-
-        <fieldset>
-          <button>Salvar</button>
+          <button class="btn -success">Salvar</button>
+          <button type="button" class="btn -default" onclick="closeModal()">Canelar</button>
         </fieldset>
       </form>
     </div>

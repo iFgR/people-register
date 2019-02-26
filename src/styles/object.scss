@@ -1,0 +1,185 @@
+.btn {
+  height: $input-height;
+  border-radius: 22px;
+  border: none;
+  padding: 0 21px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: uppercase;
+
+  &.-success {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
+
+  &.-primary {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+
+  &.-default {
+    background: linear-gradient(180deg, #B3B3B3 0%, #D0D0D0 100%);
+  }
+}
+
+.textbox-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  & > .label {
+    color: $dark-shade-100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  & > .icon {
+    position: absolute;
+    color: $dark-shade-25;
+    margin-left: 1em;
+    bottom: 1.2rem;
+    font-size: 16px;
+  }
+
+  & > .textbox {
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid $dark-shade-25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: $dark-shade-25;
+    padding-left: 4em;
+  }
+  
+  & > .textbox:focus,
+  & > .textbox:hover {
+    color: $dark-shade-75;
+    border-color: $dark-shade-50;
+  }
+
+  & > .textbox:focus ~ .icon,
+  & > .textbox:hover ~ .icon{
+    color: $dark-shade-50;
+  }
+}
+
+.checkbox-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  & > .checkbox {
+    display: none;
+  }
+
+  & > .label {
+    padding-left: 3rem;
+    line-height: 20px;
+    color: $dark-shade-50;
+  }
+
+  & > .label::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+  }
+
+  & > .icon {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    padding-top: .3em;
+    padding-left: .4em;
+    color: $purple;
+  }
+  & > .checkbox:checked + .label::before {
+    border-color: $purple;
+  }
+
+  & > .checkbox:checked + .label {
+    color: $dark-shade-75;
+  }
+  & > .checkbox:checked ~ .icon {
+    opacity: 1;
+  }
+}
+
+.radio-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  & > .label {
+    display: block;
+    color: $dark-shade-100;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  & > .fieldset {
+    display: flex;
+    align-items: center;
+  }
+
+  & > .fieldset > .radiofield {
+    position: relative;
+    border: none;
+  }
+
+  & > .fieldset > .radiofield > .radio {
+    display: none;
+  }
+
+  & > .fieldset > .radiofield > .label {
+    padding-left: 3rem;
+    line-height: 20px;
+    color: $dark-shade-50;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  & > .fieldset > .radiofield > .label::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 1px solid $dark-shade-25;
+    border-radius: 10px;
+  }
+
+  & > .fieldset > .radiofield > .icon {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    padding-top: .45em;
+    padding-left: .4em;
+    color: $purple;
+  }
+  & > .fieldset > .radiofield > .radio:checked + .label::before {
+    border-color: $purple;
+  }
+
+  & > .fieldset > .radiofield > .radio:checked + .label {
+    color: $dark-shade-75;
+  }
+  & > .fieldset > .radiofield > .radio:checked ~ .icon {
+    opacity: 1;
+  }
+}

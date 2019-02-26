@@ -1,5 +1,11 @@
+html {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+}
+
 * {
   outline: none;
+  box-sizing: border-box;
 }
 
 ul {
@@ -8,4 +14,8 @@ ul {
 
 li {
   list-style: none;
+}
+
+fieldset {
+  border: none;
 }
