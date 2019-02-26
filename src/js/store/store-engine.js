@@ -21,6 +21,7 @@ export const NewPerson = info => {
     id: hashId()
   }
   peopleList.push(formatInfo);
+  
   setStore(peopleList);
 };
 
@@ -28,12 +29,25 @@ export const ListPeople = () => JSON.parse(getStore() || '[]');
 
 export const RemovePerson = (personId) => {
   const peopleList = ListPeople();
-  peopleList.filter((personData) => personData.personId !== personId);
-  setStore(peopleList);
+  const removedPeronList = peopleList.filter((personData) => personData.id !== personId);
+
+  setStore(removedPeronList);
 }
 
-export const EditPerson = (personId, info) => {
+export const EditPerson = (personId, personInfo) => {
   const peopleList = ListPeople();
-  const peopleListEdited = peopleList.map((personData) => personData.personId === personId ? info : personData);
+  const peopleListEdited = peopleList.map((personData) => {
+    let editedInfo = {};
+    if (personData.id === personId) {
+      editedInfo = {
+        ...personInfo,
+        id: personData.id
+      }
+    } else {
+      editedInfo = personData;
+    }
+    return editedInfo;
+  });
+
   setStore(peopleListEdited);
 }

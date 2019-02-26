@@ -1,4 +1,5 @@
-import { NewPerson } from './store/store-engine.js';
+import { NewPerson, EditPerson } from '../store/store-engine.js';
+
 export default () => {
   const personId = document.getElementsByName('formPersonId')[0].value;
   const personName = document.getElementsByName('formPersonName')[0].value;
@@ -15,5 +16,11 @@ export default () => {
     birthday
   }
 
-  NewPerson(personInfo);
+  if (personId) {
+    EditPerson(personId, personInfo)
+  } else {
+    NewPerson(personInfo);
+  }
+
+  return true
 }
