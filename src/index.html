@@ -17,17 +17,17 @@
 
     <main>
       <section class="row">
-        <section class="addnew col-6">
+        <section class="addnew col-4 col-sm-6">
           <button class="btn -primary" type="button" onclick="addNewPerson()">Nova Pessoa</button>
         </section>
-  
-        <section class="list-pagination col-6">
-          <button class="btn -success" type="button" onclick="previousPage()">volta</button>
+
+        <section class="list-pagination col-8 col-sm-6">
+          <button class="btn -primary" type="button" onclick="previousPage()">volta</button>
           <div class="textbox-container">
             <input class="textbox" type="text" value="1" name="actualPage">
             <i class="fas fa-bookmark fa-2x icon"></i>
           </div>
-          <button class="btn -success" type="button" onclick="nextPage()">avança</button>
+          <button class="btn -primary" type="button" onclick="nextPage()">avança</button>
         </section>
       </section>
 
@@ -68,7 +68,7 @@
           <input class="textbox" type="text" value="" name="formCpf" id="form-cpf">
           <i class="fas fa-id-card fa-2x icon"></i>
         </div>
-        
+
         <div class="textbox-container">
           <label class="label" for="form-phone">Telefone</label>
           <input class="textbox" type="text" value="" name="formPhone" id="form-phone">
@@ -101,12 +101,12 @@
               <label class="label" for="form-gender-female">Feminino</label>
               <i class="fas fa-circle fa-1x icon"></i>
             </fieldset>
-          </div>            
+          </div>
         </div>
 
         <div class="radio-container">
           <label class="label">Status</label>
-        
+
           <div class="fieldset">
             <fieldset class="radiofield">
               <input class="radio" type="radio" value="1" name="formIsActive" id="form-is-active">

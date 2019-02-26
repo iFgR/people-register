@@ -26,6 +26,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   & > .label {
     color: $dark-shade-100;
@@ -54,7 +55,7 @@
     color: $dark-shade-25;
     padding-left: 4em;
   }
-  
+
   & > .textbox:focus,
   & > .textbox:hover {
     color: $dark-shade-75;
@@ -128,8 +129,9 @@
     text-transform: uppercase;
     font-weight: bold;
   }
-  
+
   & > .fieldset {
+    position: relative;
     display: flex;
     align-items: center;
   }
@@ -144,17 +146,19 @@
   }
 
   & > .fieldset > .radiofield > .label {
-    padding-left: 3rem;
+    padding-left: 2.5rem;
     line-height: 20px;
     color: $dark-shade-50;
     font-weight: bold;
     font-size: 14px;
+    margin-right: 2em;
   }
 
   & > .fieldset > .radiofield > .label::before {
     content: ' ';
     position: absolute;
     left: 0;
+    top: 4px;
     display: block;
     width: 20px;
     height: 20px;
@@ -168,8 +172,8 @@
     position: absolute;
     opacity: 0;
     left: 0;
-    padding-top: .45em;
-    padding-left: .4em;
+    top: .8em;
+    padding-left: .41em;
     color: $purple;
   }
   & > .fieldset > .radiofield > .radio:checked + .label::before {

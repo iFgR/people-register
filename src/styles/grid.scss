@@ -88,8 +88,8 @@
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right:  0.5rem; /* var($half-gutter-width, 0.5rem);*/
-    padding-left:  0.5rem; /* var($half-gutter-width, 0.5rem);*/
+    padding-right:  0.5rem;
+    padding-left:  0.5rem;
     -ms-flex-order: 1;
     -webkit-box-ordinal-group: 2;
             order: 1;
@@ -105,7 +105,8 @@
 @each $size, $value in $sizes {
   $vMin: nth($value, 1) + em;
   $vMax: nth($value, 2) + em;
-  @media only screen and (min-width: $vMin) { /** and (max-width: $vMax) { */
+  $color: nth($value, 3);
+  @media only screen and (min-width: $vMin) {
     $containerWidth: nth($value, 1) - 1.5;
     .container {
       width: $containerWidth + rem;
@@ -114,24 +115,9 @@
       display: none;
     }
 
-    // .col-#{$size} {
-    //   display: block;
-    //   box-sizing: border-box;
-    //   -webkit-box-flex: 0;
-    //   -ms-flex: 0 0 auto;
-    //   flex: 0 0 auto;
-    //   padding-right: var($half-gutter-width, 0.5rem);
-    //   padding-left: var($half-gutter-width, 0.5rem);
-    //   -webkit-box-flex: 1;
-    //       -ms-flex-positive: 1;
-    //           flex-grow: 1;
-    //   -ms-flex-preferred-size: 0;
-    //       flex-basis: 0;
-    //   max-width: 100%;
-    // }
-
     @for $i from 1 through $grid-columns {
       .col-#{$size}-#{$i} {
+        background-color: $color;
         display: block;
         -ms-flex-preferred-size: 100% / $grid-columns * $i;
         flex-basis: 100% / $grid-columns * $i !important;
@@ -140,8 +126,8 @@
         -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
         flex: 0 0 auto;
-        padding-right:  0.5rem; /* var($half-gutter-width, 0.5rem);*/
-        padding-left:  0.5rem; /* var($half-gutter-width, 0.5rem);*/
+        padding-right:  0.5rem;
+        padding-left:  0.5rem;
         -ms-flex-order: 1;
         -webkit-box-ordinal-group: 2;
                 order: 1;
