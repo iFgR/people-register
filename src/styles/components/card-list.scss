@@ -1,4 +1,79 @@
+@import "../size.scss";
+
 .card-list {
+  position: relative;
   display: flex;
   background-color: #fafafa;
+  padding: 1em;
+
+  & .icon {
+    margin-right: .5em;
+  }
+
+  & > .status {
+    display: flex;
+    flex: 0 0 50px;
+    justify-content: center;
+    align-items: center;
+    color: $dark-shade-25;
+  }
+
+  & > .status.-active {
+    color: $green;
+  }
+
+  & > .identification {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2em;
+  }
+
+  & > .identification > .email {
+    margin-top: .5em;
+  }
+
+  & > .identification > .more-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+  }
+
+  & > .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+  }
+
+  & > .information > .birthday {
+    margin-bottom: .5em;
+  }
+
+  & > .commands {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  & > .commands > .command {
+    width: 100px;
+  }
+
+  $maxSizeSmall: nth(nth(nth($sizes, 2), 2), 1) + rem;
+  @media only screen and (max-width: $maxSizeSmall) {
+    & > .information {
+      background-color: #F00;
+      display: none;
+    }
+  }
+
+  $maxSizeLarge: nth(nth(nth($sizes, 2), 2), 1) + rem;
+  @media only screen and (min-width: $maxSizeLarge) {
+    & > .commands {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
 }

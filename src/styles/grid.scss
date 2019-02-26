@@ -112,12 +112,11 @@
       width: $containerWidth + rem;
     }
     .hide-#{$size} {
-      display: none;
+      display: none !important;
     }
 
     @for $i from 1 through $grid-columns {
       .col-#{$size}-#{$i} {
-        background-color: $color;
         display: block;
         -ms-flex-preferred-size: 100% / $grid-columns * $i;
         flex-basis: 100% / $grid-columns * $i !important;

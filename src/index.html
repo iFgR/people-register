@@ -33,22 +33,29 @@
 
       <section class="people-list">
         <ul class="list">
-          <!-- <li class="card-list">
+          <li class="card-list">
             <div class="status">
-              ${isActive}
+              <!-- <i class="fas fa-check-square fa-2x"></i> -->
+              <i class="far fa-check-square fa-2x"></i>
             </div>
             <div class="identification">
-              <h4>${personName}</h4>
-              <h6>${cpf}</h6>
+              <h4 title="Nome"><i class="fas fa-user-alt fa-sm icon"></i>Alberto Roberto de Nobrega</h4>
+              <h5 title="e-mail" class="email"><i class="fas fa-envelope fa-sm icon"></i>alberto@dcsdcsc.gmail.com</h6>
+              <div class="more-info">
+                <h5 title="CPF"><i class="fas fa-id-card fa-sm icon"></i>010.556.233-12</h6>
+                <h5 title="Telefone"><i class="fas fa-phone icon"></i>(21) 2233-4455</h6>
+              </div>
             </div>
-            <div class="info">
-              <h6>10/08/1999</h6>
-              <h6>${phone}</h6>
+            <div class="information">
+              <h4 class="birthday"><i class="far fa-calendar-alt fa-sm icon"></i>10-10-2001</h5>
+              <h6>MASCULINO</h5>
             </div>
+
             <div class="commands">
-              <button onclick="editPerson()">Editar</button>
+              <button class="btn -primary command" onclick="editPerson()">Editar</button>
+              <button class="btn -default command" onclick="editPerson()">Remover</button>
             </div>
-          </li> -->
+          </li>
         </ul>
       </section>
     </main>
