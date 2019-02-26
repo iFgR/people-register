@@ -3,8 +3,10 @@
 .card-list {
   position: relative;
   display: flex;
-  background-color: #fafafa;
+  background-color: $dark-shade-05;
   padding: 1em;
+  border-radius: 10px;
+  margin-bottom: .5em;
 
   & .icon {
     margin-right: .5em;
@@ -24,8 +26,16 @@
 
   & > .identification {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     padding-right: 2em;
+    overflow: hidden;
+  }
+
+  & > .identification > .personname {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   & > .identification > .email {
@@ -40,10 +50,10 @@
 
   & > .information {
     display: flex;
+    flex: 0 1 200px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1 1 auto;
   }
 
   & > .information > .birthday {
@@ -56,6 +66,10 @@
     flex-direction: column;
     align-items: flex-end;
   }
+
+  & > .commands > .command:first-of-type {
+    margin-bottom: 5px;
+  }
   & > .commands > .command {
     width: 100px;
   }
@@ -63,7 +77,6 @@
   $maxSizeSmall: nth(nth(nth($sizes, 2), 2), 1) + rem;
   @media only screen and (max-width: $maxSizeSmall) {
     & > .information {
-      background-color: #F00;
       display: none;
     }
   }

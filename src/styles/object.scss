@@ -53,8 +53,12 @@
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
-    color: $dark-shade-25;
+    color: $dark-shade-100;
     padding-left: 4em;
+  }
+
+  & > .textbox::placeholder {
+    color: $dark-shade-25;
   }
 
   & > .textbox:focus,
