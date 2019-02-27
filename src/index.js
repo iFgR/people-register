@@ -5,5 +5,5 @@ window.countPeople = 1;
 window.actualPage = 0;
 window.perPage = 3;
 
-HandleListCommands();
+HandleListCommands(window);
 RefreshPeopleList();

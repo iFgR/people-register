@@ -3,7 +3,6 @@ export default personInfo => {
   const listItem = document.createElement('li');
   listItem.className = 'card-list';
   const formattedPersonInfo = formatTemplateInfo(personInfo);
-  console.log(formattedPersonInfo);
   listItem.innerHTML = tplPeopleCard(formattedPersonInfo);
   listContainer.appendChild(listItem);
 };

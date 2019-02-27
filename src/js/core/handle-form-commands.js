@@ -22,7 +22,6 @@ const listMethods = {
     RemovePerson(personId);
     RefreshPeopleList();
   },
-  previousPage: () => { },
   nextPage: () => {
     if (window.actualPage + 1 < maxLimitPages()) {
       window.actualPage++;
@@ -46,8 +45,8 @@ const listMethods = {
   }
 };
 
-export default () => {
-  Object.assign(window, listMethods);
+export default (pWindow) => {
+  Object.assign(pWindow, listMethods);
 };
 
 const maxLimitPages = () => {

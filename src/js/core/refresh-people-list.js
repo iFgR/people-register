@@ -1,6 +1,6 @@
 import ListAllPeople from '../model/list-all-people.js';
 import RenderPeopleList from './render-people-list.js';
-import ResetPeopleList from './ResetPeopleList.js';
+import ResetPeopleList from './reset-people-list.js';
 
 export default () => {
   ResetPeopleList()
